@@ -1,0 +1,187 @@
+body {
+    background-color: #222;
+    margin: 0px;
+    height: 100%;
+}
+
+.parent {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 180px 1fr 1fr 100px;
+    grid-gap: 0;
+    grid-template-areas:
+                        "header"
+                        "navbar"
+                        "main"
+                        "aside"
+                        "footer";
+}
+
+.container {
+    margin: 10px;
+}
+
+header { 
+    background-color: transparent;
+    grid-area: header;
+}
+
+.header-name {
+    color: #fff;
+    font-family: lucida, papyrus, cursive;
+    font-size: 20;
+    margin-left: 5px;
+    text-decoration: none;
+}
+
+.header img {
+    position: relative;
+    top: -12px;
+    right: 0px;
+    float: right;
+    width: 75px;
+    height: 75px;
+}
+  
+.header h1 {
+    position: relative;
+    left: 5px;
+}
+
+ul.navbar {
+    background-color: tan;
+    color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    grid-area: navbar;
+}
+
+ul.navbar li a {
+    display: block;
+    background-color: tan;
+    color: #222;
+    border: 1px solid rgb(203, 172, 132);
+    text-align: center;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+ul.navbar li a:hover {
+    background-color: rgb(231, 203, 166);
+    color: #fff;
+}
+
+main {
+    background-color: #fff;
+    color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    grid-area: main;
+}
+
+.main-img {
+    border: 5px solid #222;
+    border-radius: 10px;
+    width: 400px;
+    margin: 40px auto 40px auto;
+}
+
+.main-text {
+    color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: auto;
+    width: 70%;
+}
+
+.main-video {
+    margin: 40px auto 40px auto;
+}
+
+.main-text-box {
+    border: 5px solid #222;
+    border-radius: 10px;
+    width: 300px;
+    margin: 40px auto 40px auto;
+}
+
+aside {
+    background-color: #fff;
+    color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    grid-area: aside;
+}
+
+.reviews {
+    background-color: #fff;
+    border: 1px solid #222;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    text-align: center;
+    margin: 10px;
+}
+
+footer {
+    background-color: transparent;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    text-align: center;
+    grid-area: footer;
+}
+
+.footer-logo {
+    margin: 10px;
+}
+
+.email-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+@media (min-width: 868px) {
+    .parent {
+        grid-template-columns: 200px 1fr 200px;
+        grid-template-rows: 100px 1fr 100px;
+        grid-template-areas:
+                            "header header header"    
+                            "navbar main aside"
+                            "footer footer footer";
+    }
+
+    header {
+        background-color: transparent;
+        grid-area: header;
+    }
+
+    .header-name {
+        color: #fff;
+        font-family: lucida, papyrus, cursive;
+        font-size: 30;
+        position: relative;
+        top: -20px;
+        text-decoration: none;
+    }
+
+    .header img {
+        position: relative;
+        top: -25px;
+        right: 0px;
+        float: right;
+        width: 75px;
+        height: 75px;
+    }
+
+    .footer-logo {
+        margin: 40px;
+    }
+
+}

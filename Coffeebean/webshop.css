@@ -1,0 +1,68 @@
+.button-parent {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 300px;
+    grid-template-rows: 300px 300px 300px 300px;
+    grid-gap: 20px;
+    margin: 40px;
+    grid-template-areas:
+                        "koffie"
+                        "thee"
+                        "machine"
+                        "tools";
+}
+
+.button1 {
+    background-color: tan;
+    width: 300px;
+    height: 300px;
+    grid-area: koffie;
+}
+
+.button2 {
+    background-color: tan;
+    width: 300px;
+    height: 300px;
+    grid-area: thee;
+}
+
+.button3 {
+    background-color: tan;
+    width: 300px;
+    height: 300px;
+    grid-area: machine;
+}
+
+.button4 {
+    background-color: tan;
+    width: 300px;
+    height: 300px;
+    grid-area: tools;
+}
+
+@media (min-width: 768px) {
+    .button-parent {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 300px;
+        grid-template-rows: 300px 300px 300px 300px;
+        grid-gap: 20px;
+        margin: 40px;
+        grid-template-areas:
+                            "koffie"
+                            "thee"
+                            "machine"
+                            "tools";
+    }
+}
+
+@media (min-width: 1024px) {
+    .button-parent {
+        grid-template-columns: 300px 300px;
+        grid-template-rows: 300px 300px;
+        grid-gap: 20px;
+        grid-template-areas:
+                            "koffie thee"
+                            "machine tools";
+    }  
+}
